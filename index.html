@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="Lendha Logo" class="logo">
+        <img src="frame.png" alt="Mobile Menu" class="menu-icon" onclick="toggleMenu()">
+        <div class="nav-links">
+            <a href="#" class="nav-link home">Home</a>
+            <a href="#" class="nav-link loans">Loans</a>
+            <a href="#" class="nav-link business">Business management</a>
+            <a href="#" class="nav-link contact">Contact Us</a>
+        </div>
+        <a href="#" class="nav-link login">Log in</a>
+        <button class="signup-btn">Sign Up</button>
+    </nav>
+
+    <section class="hero">
+        <img src="met.png" alt="Decorative element" class="mrt-img">
+        <h1 class="hero-title">All in One Business Management Solution</h1>
+        <p class="hero-subtitle">We provide spend solutions such as invoice generation, payment schedules, cashflow analysis and so much more</p>
+        <button class="hero-btn">Get Started</button>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

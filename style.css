@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll; /* Forces the vertical scrollbar to always display */
+}
+
+.navbar {
+    background-color: #1A1F4C;
+    width: 1440px;
+    height: 80px;
+    opacity: 1;
+    position: relative;
+    left: -0.08px;
+}
+
+.logo {
+    width: 106px;
+    height: 44px;
+    opacity: 1;
+    position: absolute;
+    top: 18px;
+    left: 101.92px;
+}
+
+/* Hide the mobile hamburger menu on desktop views by default */
+.menu-icon {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px; 
+    position: absolute;
+    top: 32px;
+    left: 300px; 
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-decoration: none; 
+}
+
+.nav-link.home,
+.nav-link.loans,
+.nav-link.contact {
+    font-weight: 400;
+    color: #F4F7FF;
+}
+
+.nav-link.business {
+    font-weight: 700;
+    color: #F5A831;
+}
+
+.nav-link.login {
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    top: 32px;
+    left: 1050px; }
+
+.signup-btn {
+    width: 141px;
+    height: 43px;
+    opacity: 1;
+    position: absolute;
+    top: 18.5px;
+    left: 1130px;
+    border-radius: 5px;
+    background-color: #FFFFFF; 
+    color: #1A1F4C; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; 
+    overflow-y: auto; 
+  }
+
+  /* Navbar Adjustments */
+  .navbar {
+    width: 100%;
+    left: 0;
+    background-color: #FFFFFF; 
+    position: absolute;
+    z-index: 999;
+  }
+
+  .logo {
+    content: url("lent.png"); 
+     width: 34.7px;
+    height: 35px;
+    top: 10.33px;
+    left: 15.96px;
+    opacity: 1;
+  }
+  
+  .menu-icon {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 19.79px;
+    left: 338.96px;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .nav-links,
+  .nav-link.login,
+  .signup-btn {
+    display: none; 
+  }
+
+ 
+  .navbar.active {
+    height: auto;
+    padding-top: 80px; 
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1F4C;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .navbar.active .nav-link.login {
+    display: block;
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .navbar.active .signup-btn {
+    display: flex;
+    position: static;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hero {
+    position: relative;
+    height: 700px; /* Gives the container structure so the browser knows the page has content to scroll */
+}
+
+.mrt-img {
+    width: 113.25px;
+    height: 135.19px;
+    opacity: 1;
+    position: absolute;
+    top: 172px;
+    left: 203.92px;
+    transform: rotate(8.96deg);
+}
+
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 128%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #1A1F4C;
+    position: absolute;
+    width: 754px; 
+    height: 180px;
+    opacity: 1;
+    top: 132px;
+    left: 342.92px; 
+}
+
+.hero-subtitle {
+    font-family: 'Nunito', sans-serif; 
+    font-size: 18px;
+    line-height: 165%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #1A1A1A;
+    position: absolute;
+    width: 690px;
+    height: 60px;
+    opacity: 1;
+    transform: rotate(0deg);
+    top: 309px;
+    left: 367px;
+}
+
+.hero-btn {
+    width: 204px;
+    height: 49px;
+    position: absolute;
+    top: 403px;
+    left: 617px;
+    border-radius: 5px;
+    padding: 11px 50px;
+    background-color: #1A1F4C;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Mobile Responsive Styles for Hero Section --- */
+@media (max-width: 768px) {
+  .mrt-img {
+    content: url("handle.png"); 
+    width: 48.57px;
+    height: 57.98px;
+    top: 98px;
+    left: 3px;
+    opacity: 1;
+    transform: rotate(0.96deg);
+  }
+
+
+  .hero-title {
+    font-weight: 500;
+    font-size: 24px;
+    width: 346px;
+    height: 62px;
+    top: 94px;
+    left: 15px;
+  }
+
+  .hero-subtitle {
+    width: 346px; 
+    height: auto;
+    top: 180px; 
+    left: 15px;
+  }
+
+  .hero-btn {
+    width: 181px;
+    height: 43px;
+    top: 306px;
+    left: 96px;
+    padding: 11px 50px;
+    font-size: 14px;
+  }
+}
